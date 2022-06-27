@@ -16,16 +16,19 @@ public class JpaMain {
         tx.begin();
 
         try {
-            List<Member> result  = em.createQuery("select m from Member as m", Member.class)
-                    .setFirstResult(5)
-                    .setMaxResults(8)
-                    .getResultList();
+            //비영속 상태
 
-            for (Member member :result){
-                System.out.println("member.name = " + member.getName());
-            }
+            //Member member1 = new Member(150L, "A");
+            //Member member2 = new Member(160L, "Bs");
+            Member findMember = em.find(Member.class, 150L);
+            findMember.setName("xxxx");
+            //em.detach(findMember); 영속상태의 entity가 영속성 컨텍스트에서 분리 detach <특저 entity만 준영속 상태로 전환 >
+            //em.clear(); //영속성 컨텍스트 완전히 초기화
 
-            tx.commit();
+            //em.persist(member1);
+            //em.persist(member2); //영속성 컨텍스트에 쌓임
+            System.out.println("++++");
+            tx.commit(); //transaction.commit() 하는 시점에 database 에 query 날림
         } catch (Exception e){
             tx.rollback();
         } finally {
