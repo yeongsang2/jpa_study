@@ -5,24 +5,20 @@ import javax.transaction.Transactional;
 import java.util.Date;
 
 @Entity //jpa를 사용하는 애구나~내가 관리해야지
-@TableGenerator(
-        name = "member_seq_generator",
-        table = "my_sequences",
-        pkColumnName = "member_seq",
-        initialValue = 1,
-        allocationSize = 1
-)
 public class Member {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE, generator = "member_seq_generator")
+    @GeneratedValue
+    @Column(name = "MEMBER_ID")
     private Long id;
-    @Column(name="name" ,nullable = false)
-    private String userName;
+    @Column(name = "USERNAME")
+    private String username;
+   // @Column(name = "TEAM_ID")
+   // private Long teamId;
 
-    public Member(){
-
-    }
+    @ManyToOne //member입장에서 many team 은 one
+    @JoinColumn(name ="TEAM_ID") //join 하는 z
+    private Team team;
 
     public Long getId() {
         return id;
@@ -32,11 +28,19 @@ public class Member {
         this.id = id;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public Team getTeam() {
+        return team;
+    }
+
+    public void setTeam(Team team) {
+        this.team = team;
     }
 }
