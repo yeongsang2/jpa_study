@@ -17,10 +17,12 @@ public class JpaMain {
 
         try {
             Member member = new Member();
-            member.setId(2L);
-            member.setUsername("B");
-            member.setRoleType(RoleType.ADMIN);
+
+            member.setUserName("C");
             em.persist(member);
+
+
+
             tx.commit(); //transaction.commit() 하는 시점에 database 에 query 날림
         } catch (Exception e){
             tx.rollback();
