@@ -3,6 +3,8 @@ package jpabook.jpashop.domain;
 import net.bytebuddy.dynamic.loading.InjectionClassLoader;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Member {
@@ -16,6 +18,16 @@ public class Member {
     private String street;
     private String zipcode;
 
+    public List<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
+    }
+
+    @OneToMany(mappedBy = "member") // 일대다 연관관계의 주인
+    private List<Order> orders = new ArrayList<>();
     public Long getId() {
         return id;
     }
