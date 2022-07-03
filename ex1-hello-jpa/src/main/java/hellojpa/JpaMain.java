@@ -16,9 +16,10 @@ public class JpaMain {
         tx.begin();
 
         try {
-
             Team team = new Team();
             team.setName("TeamA");
+            //team.getMembers().add(member);
+
             em.persist(team); //영속상태
 
             Member member = new Member();
@@ -26,14 +27,16 @@ public class JpaMain {
             member.setTeam(team);
             em.persist(member);
 
+
             em.flush();// 영속성 컨텍스트에 있는내용 db에 query 날리고
             em.clear(); // 영속성 컨텍스트 초기화
 
-            Member findMember= em.find(Member.class, member.getId());
+            Team findTeam = em.find(Team.class, member.getTeam());
+            List<Member> members = findTeam.getMembers();
 
-            Team findTeam = findMember.getTeam();
-            System.out.println("findTeam = " + findTeam.getName());
-
+            for(Member m : members){
+                System.out.println(m.getUsername());
+            }
             tx.commit(); //transaction.commit() 하는 시점에 database 에 query 날림
         } catch (Exception e){
             tx.rollback();

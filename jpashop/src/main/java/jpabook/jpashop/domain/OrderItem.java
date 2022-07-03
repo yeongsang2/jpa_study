@@ -19,6 +19,7 @@ public class OrderItem {
     @ManyToOne
     @JoinColumn(name="ITEM_ID")
     private Item item;
+
     //@Column(name="ITEM_ID")
     //private Long itemId;
 

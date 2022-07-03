@@ -21,8 +21,13 @@ public class Order {
     @JoinColumn(name = "MEMBER_ID")
     private Member member;
 
+
+    @OneToOne(targetEntity = Delivery.class)
+    @JoinColumn(name="DELIVERY_ID")
+    private Delivery delivery;
+
     @OneToMany(mappedBy = "order")
-    private List<OrderItem> orderItems = new ArrayList<OrderItem>();
+    private List<OrderItem> orderItems = new ArrayList<>();
     private LocalDateTime orderDate;
 
     @Enumerated(EnumType.STRING)

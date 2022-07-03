@@ -16,9 +16,15 @@ public class Member {
    // @Column(name = "TEAM_ID")
    // private Long teamId;
 
+
     @ManyToOne //member입장에서 many team 은 one
     @JoinColumn(name ="TEAM_ID") //join 하는 z
     private Team team;
+
+
+    @OneToOne
+    @JoinColumn(name ="LOCKER_ID")
+    private Locker locker;
 
     public Long getId() {
         return id;
@@ -40,7 +46,10 @@ public class Member {
         return team;
     }
 
+
     public void setTeam(Team team) {
+
         this.team = team;
+        team.getMembers().add(this); // 연관관계 편의 메소드
     }
 }

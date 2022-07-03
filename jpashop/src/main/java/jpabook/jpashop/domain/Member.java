@@ -18,6 +18,8 @@ public class Member {
     private String street;
     private String zipcode;
 
+
+
     public List<Order> getOrders() {
         return orders;
     }
@@ -26,7 +28,7 @@ public class Member {
         this.orders = orders;
     }
 
-    @OneToMany(mappedBy = "member") // 일대다 연관관계의 주인
+    @OneToMany(mappedBy = "member") // -> 일대다 연관관계의 주인
     private List<Order> orders = new ArrayList<>();
     public Long getId() {
         return id;
