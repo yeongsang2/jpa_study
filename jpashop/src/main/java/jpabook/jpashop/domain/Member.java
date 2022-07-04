@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-public class Member {
+public class Member extends BaseEntity{
 
     //GeneratedValue 내가 생성x db가 생성 생략시 auto
     @Id @GeneratedValue(strategy = GenerationType.AUTO) //식별자

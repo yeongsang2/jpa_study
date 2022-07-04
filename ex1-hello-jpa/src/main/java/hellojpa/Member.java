@@ -5,7 +5,7 @@ import javax.transaction.Transactional;
 import java.util.Date;
 
 @Entity //jpa를 사용하는 애구나~내가 관리해야지
-public class Member {
+public class Member extends BaseEntity{
 
     @Id
     @GeneratedValue
