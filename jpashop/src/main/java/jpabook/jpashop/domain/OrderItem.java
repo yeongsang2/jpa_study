@@ -10,13 +10,13 @@ public class OrderItem {
     @Column(name= "ORDER_ITEM_ID")
     private Long id;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="ORDER_ID")
     private Order order; // -> foreign key 값을 가지는 것이 아니라 객체값을 직접 가짐
     //@Column(name="ORDER_ID")
     // Long orderId;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="ITEM_ID")
     private Item item;
 

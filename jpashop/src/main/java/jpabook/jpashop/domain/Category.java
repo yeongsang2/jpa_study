@@ -4,6 +4,8 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import static javax.persistence.FetchType.LAZY;
+
 @Entity
 public class Category extends BaseEntity{
 
@@ -19,7 +21,7 @@ public class Category extends BaseEntity{
     )
     private List<Item> items = new ArrayList<Item>();
 
-    @ManyToOne //자식입장에서 부조 하나
+    @ManyToOne(fetch = LAZY) //자식입장에서 부조 하나
     @JoinColumn(name="PARENT_ID")
     private Category parent; // 상위카테고리
 

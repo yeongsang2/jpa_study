@@ -17,16 +17,16 @@ public class Order extends BaseEntity{
 //  @Column(name="MEMBER_ID") 왜래키 값을 매핑해서 직접 가져옴
 //  private Long memberId;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MEMBER_ID")
     private Member member;
 
 
-    @OneToOne(targetEntity = Delivery.class)
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL) // order 생성시 delivery 자동 생성
     @JoinColumn(name="DELIVERY_ID")
     private Delivery delivery;
 
-    @OneToMany(mappedBy = "order")
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     private List<OrderItem> orderItems = new ArrayList<>();
     private LocalDateTime orderDate;
 
