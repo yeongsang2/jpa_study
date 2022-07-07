@@ -3,7 +3,7 @@ package hellojpa;
 import javax.persistence.*;
 import java.sql.PreparedStatement;
 
-@Entity
+
 public class Locker {
 
     @Id @GeneratedValue
