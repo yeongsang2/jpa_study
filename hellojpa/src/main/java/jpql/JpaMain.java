@@ -1,6 +1,7 @@
 package jpql;
 
 import javax.persistence.*;
+    import java.util.Iterator;
 import java.util.List;
 
 public class JpaMain {
@@ -45,14 +46,30 @@ public class JpaMain {
             em.flush();
             em.clear();
 
-            String query = "select m from Member m";
-            System.out.println("==============================");
-            List<Member> result = em.createQuery(query, Member.class).getResultList();
-            System.out.println("==============================");
+/*
+            List<Member> result = em.createQuery("Member.findByUsername", Member.class)
+//            List<Member> result = em.createQuery("select m from Member m where m.username = :username", Member.class)
+                    .setParameter("username", "회원1")
+                    .getResultList();
+            //String query = "select m from Member m join fetch m.team";
+*/
+//            String query = "select t from Team t join t.members"; // join t.members m
 
-            for(Member member : result){
-                System.out.println(member.getUsername() + " , " + member.getTeam().getName());
-            }
+        //    String query = "select t from Team t join fetch t.members";
+
+//            List<Team> result = em.createQuery(query, Team.class).getResultList();
+//            System.out.println("==============================");
+            int resultCount = em.createQuery("update Member m set m.age = 20").executeUpdate(); //벌크 연산
+
+            em.clear(); // 벌크연산 후 영속성 컨텍스트 초기화
+            Member findMember = em.find(Member.class, member1.getId());
+
+            System.out.println(findMember.getAge());
+
+
+//            for(Memb  er member : result){
+//                System.out.println(member.getUsername() + " , " + member.getTeam().getName());
+//            }
 
 
             tx.commit();
