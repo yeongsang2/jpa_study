@@ -24,11 +24,9 @@ public class JpaMain {
             userInfo.setNickName("nickname1");
             userInfo.setPosition("kakao");
             userInfo.setSchool("seoul");
-            em.persist(userInfo);
 
             UserInterest userInterest = new UserInterest();
             userInterest.setInterest("java");
-            em.persist(userInterest);
 
             userInfo.setUserInterest(userInterest);
             user.setUserInfo(userInfo);
@@ -63,8 +61,8 @@ public class JpaMain {
             post2.setPrice("20000");
             em.persist(post2);
 //
-//            em.clear();
-//            em.flush();
+            em.flush();
+            em.clear();
 
             User user1 = em.find(User.class, user.getId());
             List<Post> postList = user1.getPostList();

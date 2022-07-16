@@ -63,7 +63,7 @@ public class UserInfo {
 
     private int reputationScore;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="user_interest_id")
     private UserInterest userInterest;
 

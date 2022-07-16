@@ -4,26 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09bce647-8345-449d-8184-f5d55c7bcf11" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jpapractice/practice/domain/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jpapractice/practice/domain/BookState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jpapractice/practice/domain/File.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jpapractice/practice/domain/JpaMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jpapractice/practice/domain/Post.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jpapractice/practice/domain/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jpapractice/practice/domain/UserInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jpapractice/practice/domain/UserInterest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hellojpa/src/main/java/jpql/JpaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hellojpa/src/main/java/jpql/JpaMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hellojpa/src/main/java/jpql/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hellojpa/src/main/java/jpql/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hellojpa/target/classes/jpql/JpaMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/../hellojpa/target/classes/jpql/JpaMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hellojpa/target/classes/jpql/Member.class" beforeDir="false" afterPath="$PROJECT_DIR$/../hellojpa/target/classes/jpql/Member.class" afterDir="false" />
-    </list>
+    <list default="true" id="09bce647-8345-449d-8184-f5d55c7bcf11" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,7 +18,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -47,17 +28,17 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/study_jpa/practice",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/study_jpa/practice&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="jpapractice.practice.domain" />
@@ -67,7 +48,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="JpaMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="jpapractice.practice.domain.JpaMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="jpapractice.practice.domain.JpaMain" />
       <module name="practice" />
       <extension name="coverage">
@@ -82,7 +63,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.JpaMain" />
+        <item itemvalue="Application.jpapractice.practice.domain.JpaMain" />
       </list>
     </recent_temporary>
   </component>
